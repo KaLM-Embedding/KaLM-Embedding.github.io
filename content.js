@@ -13,7 +13,7 @@ const KaLM_Content = {
         {
             icon: "fas fa-compress",
             title: "Compact & Efficient",
-            description: "Only 0.5B parameters, making it lightweight and fast while maintaining impressive performance."
+            description: "Lightweight and fast while maintaining impressive performance."
         },
         {
             icon: "fas fa-database",
@@ -30,35 +30,35 @@ const KaLM_Content = {
         {
             name: "KaLM-embedding-multilingual-mini-instruct-v2.5",
             type: "Feature Extraction • 0.5B Parameters",
-            description: "The latest version with enhanced instruction-following capabilities and improved performance across multiple tasks.",
+            description: "Bidirectional Attention",
             link: "https://huggingface.co/KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5",
             is_latest: true
         },
         {
             name: "KaLM-embedding-multilingual-mini-instruct-v2",
             type: "Feature Extraction • 0.5B Parameters",
-            description: "Second generation model with superior training techniques and versatile embedding capabilities.",
+            description: "Bidirectional Attention",
             link: "https://huggingface.co/HIT-TMG/KaLM-embedding-multilingual-mini-instruct-v2",
             is_latest: false
         },
         {
             name: "KaLM-embedding-multilingual-mini-instruct-v1.5",
             type: "Sentence Similarity • 0.5B Parameters",
-            description: "Improved version with better instruction understanding and enhanced sentence similarity capabilities.",
+            description: "",
             link: "https://huggingface.co/HIT-TMG/KaLM-embedding-multilingual-mini-instruct-v1.5",
             is_latest: false
         },
         {
             name: "KaLM-embedding-multilingual-mini-v1",
             type: "Sentence Similarity • 0.5B Parameters",
-            description: "First generation model with strong multilingual embedding performance and high download popularity.",
+            description: "",
             link: "https://huggingface.co/HIT-TMG/KaLM-embedding-multilingual-mini-v1",
             is_latest: false
         },
         {
             name: "KaLM-embedding-multilingual-mini-instruct-v1",
             type: "Sentence Similarity • 0.5B Parameters",
-            description: "Instruction-tuned version of v1 with enhanced task-specific performance.",
+            description: "",
             link: "https://huggingface.co/HIT-TMG/KaLM-embedding-multilingual-mini-instruct-v1",
             is_latest: false
         },
@@ -93,12 +93,12 @@ const KaLM_Content = {
     datasets: [
         {
             name: "KaLM-embedding-pretrain-data",
-            description: "Large-scale pre-training dataset with cleaner, more diverse, and domain-specific data for embedding model training.",
+            description: "Large-scale weakly supervised pre-training data used to train a base model into an embedding model",
             link: "https://huggingface.co/datasets/HIT-TMG/KaLM-embedding-pretrain-data"
         },
         {
             name: "KaLM-embedding-finetuning-data",
-            description: "Curated fine-tuning dataset for instruction-following and task-specific embedding capabilities.",
+            description: "Versatile, task-specific fine-tuning data for multi-domain and multi-task learning.",
             link: "https://huggingface.co/datasets/KaLM-Embedding/KaLM-embedding-finetuning-data"
         }
     ]

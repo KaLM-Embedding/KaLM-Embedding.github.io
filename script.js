@@ -53,7 +53,7 @@ function renderContent() {
             <h3 class="paper-title">${paper.title}</h3>
             <p class="paper-meta">
                 <span class="paper-arxiv">arXiv:${paper.arxiv_id}</span>
-                <span class="paper-date">Published: ${paper.date}</span>
+                <span class="paper-date">Released: ${paper.date}</span>
             </p>
             <p class="paper-description">${paper.description}</p>
             <div class="paper-links">

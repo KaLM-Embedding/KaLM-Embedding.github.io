@@ -86,7 +86,10 @@ body {
 /* ===== Hero Section ===== */
 .hero {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
-    padding: 6rem 2rem;
+    min-height: 80vh; /* Set a minimum height to ensure it's not too large or too small */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: var(--white);
     position: relative; /* For absolute positioning of particles */
@@ -95,7 +98,7 @@ body {
 
 .hero-content {
     max-width: 900px;
-    margin: 0 auto;
+    padding: 6rem 2rem; /* Move padding to hero-content to control inner spacing */
     position: relative; /* Ensure content is above particles */
     z-index: 2;
 }

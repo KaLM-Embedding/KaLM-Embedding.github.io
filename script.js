@@ -29,6 +29,7 @@ function renderContent() {
         card.innerHTML = `
             ${model.is_latest ? '<div class="model-badge">Latest</div>' : ''}
             <h3 class="model-name">${model.name}</h3>
+            <p class="paper-date">Released: ${model.date}</p>
             <p class="model-type">${model.type}</p>
             <p class="model-description">${model.description}</p>
             <div class="model-links">

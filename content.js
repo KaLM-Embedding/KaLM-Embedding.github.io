@@ -28,6 +28,14 @@ const KaLM_Content = {
     ],
     models: [
         {
+            name: "KaLM-Embedding-Gemma3-12B-2511",
+            type: "Sentence Similarity • 11.7B Parameters",
+            date: "October 2025",
+            description: "Multilingual• Large Scale",
+            link: "https://huggingface.co/tencent/KaLM-Embedding-Gemma3-12B-2511",
+            is_latest: true
+        },
+        {
             name: "KaLM-embedding-multilingual-mini-instruct-v2.5",
             type: "Sentence Similarity • 0.5B Parameters",
             date: "October 2025",

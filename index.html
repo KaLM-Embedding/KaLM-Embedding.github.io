@@ -1,113 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KaLM-Embedding - Multilingual Text Embedding Models</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">KaLM-Embedding</a>
-            <div class="nav-links">
-                <a href="https://github.com/KaLM-Embedding" target="_blank" class="nav-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+      <div class="nav-container">
+        <a href="#" class="nav-logo" aria-label="KaLM-Embedding">
+          <span class="wordmark wordmark--nav">
+            <span class="wordmark-top">
+              <span class="wm wm-k">K</span><span class="wm wm-k">a</span
+              ><span class="wm wm-k">L</span><span class="wm wm-k">M</span
+              ><span class="wm wm-k">-</span>
+            </span>
+            <span class="wordmark-bottom">Embedding</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a
+            href="https://github.com/KaLM-Embedding"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div id="particles-js"></div>
-        <div class="hero-content">
-            <div class="logo-container">
-                <div class="logo-circle">
-                    <span class="logo-text">KaLM</span>
-                </div>
-            </div>
-            <h1 class="hero-title" id="hero-title"></h1>
-            <p class="hero-subtitle" id="hero-subtitle"></p>
-            <p class="hero-description" id="hero-description"></p>
-            
-            <div class="hero-buttons">
-                <a href="#models" class="btn btn-primary">Explore Models</a>
-                <a href="#papers" class="btn btn-secondary">Read Papers</a>
-            </div>
+      <div id="particles-js"></div>
+      <div class="hero-content">
+        <h1 class="hero-title" id="hero-title">
+          <span class="wordmark wordmark--hero" aria-label="KaLM-Embedding">
+            <span class="wordmark-top">
+              <span class="wm wm-k">K</span><span class="wm wm-k">a</span
+              ><span class="wm wm-k">L</span><span class="wm wm-k">M</span
+              ><span class="wm wm-k">-</span>
+            </span>
+            <span class="wordmark-bottom">embedding</span>
+          </span>
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle"></p>
+        <p class="hero-description" id="hero-description"></p>
+
+        <div class="hero-buttons">
+          <a href="#models" class="btn btn-primary">Explore Models</a>
+          <a href="#papers" class="btn btn-secondary">Read Papers</a>
         </div>
+      </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
-        <div class="container">
-            <h2 class="section-title">Key Features</h2>
-            <div class="features-grid" id="features-grid">
-                <!-- Content will be rendered here by script.js -->
-            </div>
+      <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid" id="features-grid">
+          <!-- Content will be rendered here by script.js -->
         </div>
+      </div>
     </section>
 
     <!-- Models Section -->
     <section id="models" class="models">
-        <div class="container">
-            <h2 class="section-title">Available Models</h2>
-            <p class="section-subtitle">Choose from our collection of pre-trained embedding models</p>
-            
-            <div class="models-grid" id="models-grid">
-                <!-- Content will be rendered here by script.js -->
-            </div>
+      <div class="container">
+        <h2 class="section-title">Available Models</h2>
+        <p class="section-subtitle">
+          Choose from our collection of pre-trained embedding models
+        </p>
+
+        <div class="models-grid" id="models-grid">
+          <!-- Content will be rendered here by script.js -->
         </div>
+      </div>
     </section>
 
     <!-- Papers Section -->
     <section id="papers" class="papers">
-        <div class="container">
-            <h2 class="section-title">Research Papers</h2>
-            <p class="section-subtitle">Explore the technical foundations behind KaLM-Embedding</p>
-            
-            <div class="papers-grid" id="papers-grid">
-                <!-- Content will be rendered here by script.js -->
-            </div>
+      <div class="container">
+        <h2 class="section-title">Research Papers</h2>
+        <p class="section-subtitle">
+          Explore the technical foundations behind KaLM-Embedding
+        </p>
+
+        <div class="papers-grid" id="papers-grid">
+          <!-- Content will be rendered here by script.js -->
         </div>
+      </div>
     </section>
 
     <!-- Datasets Section -->
     <section class="datasets">
-        <div class="container">
-            <h2 class="section-title">Training Datasets</h2>
-            <p class="section-subtitle">Access the high-quality datasets used to train KaLM-Embedding models</p>
-            
-            <div class="datasets-grid" id="datasets-grid">
-                <!-- Content will be rendered here by script.js -->
-            </div>
+      <div class="container">
+        <h2 class="section-title">Training Datasets</h2>
+        <p class="section-subtitle">
+          Access the high-quality datasets used to train KaLM-Embedding models
+        </p>
+
+        <div class="datasets-grid" id="datasets-grid">
+          <!-- Content will be rendered here by script.js -->
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>KaLM-Embedding</h3>
-                    <p>A Versatile and Compact Multilingual Text Embedding Model</p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://github.com/KaLM-Embedding" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://huggingface.co/collections/KaLM-Embedding/kalm-embedding-68e251061c21d2a83c56fe70" target="_blank" title="Hugging Face">
-                        <i class="fas fa-face-smile"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 KaLM-Embedding by SLAI & Tencent. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3 aria-label="KaLM-Embedding">
+              <span class="wordmark wordmark--footer">
+                <span class="wordmark-top">
+                  <span class="wm wm-k">K</span><span class="wm wm-k">a</span
+                  ><span class="wm wm-k">L</span><span class="wm wm-k">M</span
+                  ><span class="wm wm-k">-</span>
+                </span>
+                <span class="wordmark-bottom">Embedding</span>
+              </span>
+            </h3>
+            <p>A Versatile and Compact Multilingual Text Embedding Model</p>
+          </div>
+          <div class="footer-links">
+            <a
+              href="https://github.com/KaLM-Embedding"
+              target="_blank"
+              title="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://huggingface.co/collections/KaLM-Embedding/kalm-embedding-68e251061c21d2a83c56fe70"
+              target="_blank"
+              title="Hugging Face"
+            >
+              <i class="fas fa-face-smile"></i>
+            </a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 KaLM-Embedding by SLAI & Tencent. All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Content data file -->
@@ -115,6 +167,5 @@
     <!-- Main script for rendering and interactivity -->
     <script src="script.js"></script>
     <script src="particles-config.js"></script>
-</body>
+  </body>
 </html>
-

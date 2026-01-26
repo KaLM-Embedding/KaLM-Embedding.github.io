@@ -457,10 +457,19 @@ body {
 	box-shadow: var(--shadow-soft);
 }
 
+.model-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0.8rem;
+}
+
+.model-icon {
+	font-size: 1.6rem;
+	color: var(--blue);
+}
+
 .model-badge {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
 	background: var(--blue);
 	color: var(--surface);
 	padding: 0.35rem 0.85rem;
@@ -468,7 +477,6 @@ body {
 	font-size: 0.8rem;
 	font-weight: 700;
 }
-
 .model-name {
 	font-size: 1.15rem;
 	font-weight: 800;
@@ -526,6 +534,10 @@ body {
 	margin-top: 2.6rem;
 }
 
+.survey-grid {
+	grid-template-columns: 1fr;
+}
+
 .paper-card {
 	background-color: #e8f0fe;
 	border-radius: var(--radius);
@@ -535,6 +547,27 @@ body {
 	border: 1px solid rgba(26, 115, 232, 0.12);
 	position: relative;
 	overflow: hidden;
+}
+
+.survey-papers .paper-card {
+	background-color: #fff8e6;
+	border: 1px solid rgba(251, 188, 4, 0.22);
+}
+
+.survey-papers .paper-icon,
+.survey-papers .paper-arxiv {
+	color: #d18f00;
+}
+
+.survey-papers .paper-link {
+	color: #d18f00;
+	border-color: rgba(209, 143, 0, 0.2);
+}
+
+.survey-papers .paper-link:hover {
+	background-color: #d18f00;
+	border-color: #d18f00;
+	color: var(--surface);
 }
 
 .paper-card::before {
@@ -847,3 +880,5 @@ html {
 .dataset-card {
 	animation: fadeInUp 0.6s ease-out;
 }
+
+

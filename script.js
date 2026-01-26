@@ -32,7 +32,10 @@ function renderContent() {
     const card = document.createElement("div");
     card.className = model.is_latest ? "model-card featured" : "model-card";
     card.innerHTML = `
-            ${model.is_latest ? '<div class="model-badge">Latest</div>' : ""}
+            <div class="model-header">
+                <i class="fas fa-cube model-icon"></i>
+                ${model.is_latest ? '<span class="model-badge">Latest</span>' : ""}
+            </div>
             <h3 class="model-name">${model.name}</h3>
             <p class="paper-date">Released: ${model.date}</p>
             <p class="model-type">${model.type}</p>
@@ -80,7 +83,36 @@ function renderContent() {
     papersGrid.appendChild(card);
   });
 
-  // 5. Datasets Section
+  // 5. Survey Papers Section
+  const surveyGrid = document.getElementById("survey-grid");
+  if (surveyGrid) {
+    KaLM_Content.survey_papers.forEach((paper) => {
+      const card = document.createElement("div");
+      card.className = "paper-card";
+      card.innerHTML = `
+            <div class="paper-header">
+                <i class="fas fa-file-alt paper-icon"></i>
+            </div>
+            <h3 class="paper-title">${paper.title}</h3>
+            <p class="paper-meta">
+                <span class="paper-arxiv">arXiv:${paper.arxiv_id}</span>
+                <span class="paper-date">Released: ${paper.date}</span>
+            </p>
+            <p class="paper-description">${paper.description}</p>
+            <div class="paper-links">
+                <a href="${paper.arxiv_link}" target="_blank" class="paper-link">
+                    <i class="fas fa-file-pdf"></i> arXiv
+                </a>
+                <a href="${paper.github_link}" target="_blank" class="paper-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        `;
+      surveyGrid.appendChild(card);
+    });
+  }
+
+  // 6. Datasets Section
   const datasetsGrid = document.getElementById("datasets-grid");
   KaLM_Content.datasets.forEach((dataset) => {
     const card = document.createElement("div");
@@ -206,3 +238,5 @@ window.addEventListener("load", () => {
     document.body.style.opacity = "1";
   }, 100);
 });
+
+

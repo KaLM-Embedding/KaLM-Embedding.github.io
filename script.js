@@ -112,7 +112,61 @@ function renderContent() {
     });
   }
 
-  // 6. Datasets Section
+  // 6. LMEB Section
+  const lmeb = KaLM_Content.lmeb;
+  const lmebTitle = document.getElementById("lmeb-title");
+  const lmebSubtitle = document.getElementById("lmeb-subtitle");
+  const lmebOverview = document.getElementById("lmeb-overview");
+  const lmebStats = document.getElementById("lmeb-stats");
+  const lmebMemoryGrid = document.getElementById("lmeb-memory-grid");
+  const lmebLinks = document.getElementById("lmeb-links");
+
+  if (lmeb && lmebOverview && lmebStats && lmebMemoryGrid && lmebLinks) {
+    if (lmebTitle) {
+      lmebTitle.textContent = lmeb.title;
+    }
+    if (lmebSubtitle) {
+      lmebSubtitle.textContent = lmeb.subtitle;
+    }
+
+    lmebOverview.innerHTML = `
+            <p>${lmeb.overview}</p>
+        `;
+
+    lmeb.stats.forEach((stat) => {
+      const item = document.createElement("div");
+      item.className = "lmeb-stat";
+      item.innerHTML = `
+            <span class="lmeb-stat-value">${stat.value}</span>
+            <span class="lmeb-stat-label">${stat.label}</span>
+        `;
+      lmebStats.appendChild(item);
+    });
+
+    lmeb.memory_types.forEach((memoryType) => {
+      const card = document.createElement("div");
+      card.className = "lmeb-memory-card";
+      card.innerHTML = `
+            <div class="lmeb-memory-icon">
+                <i class="${memoryType.icon}"></i>
+            </div>
+            <h3>${memoryType.title}</h3>
+            <p>${memoryType.description}</p>
+        `;
+      lmebMemoryGrid.appendChild(card);
+    });
+
+    lmeb.links.forEach((link) => {
+      const anchor = document.createElement("a");
+      anchor.href = link.url;
+      anchor.target = "_blank";
+      anchor.className = "lmeb-link";
+      anchor.innerHTML = `<i class="${link.icon}"></i> ${link.label}`;
+      lmebLinks.appendChild(anchor);
+    });
+  }
+
+  // 7. Datasets Section
   const datasetsGrid = document.getElementById("datasets-grid");
   KaLM_Content.datasets.forEach((dataset) => {
     const card = document.createElement("div");
@@ -168,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Observe all cards
   const cards = document.querySelectorAll(
-    ".feature-card, .model-card, .paper-card, .dataset-card"
+    ".feature-card, .model-card, .paper-card, .lmeb-card, .lmeb-memory-card, .dataset-card"
   );
   cards.forEach((card, index) => {
     card.style.opacity = "0";

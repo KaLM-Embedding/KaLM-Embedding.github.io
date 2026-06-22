@@ -126,6 +126,75 @@ const KaLM_Content = {
       github_link: "https://github.com/HITsz-TMG/Text-Embedding-Survey",
     },
   ],
+  lmeb: {
+    title: "LMEB: Long-horizon Memory Embedding Benchmark",
+    subtitle:
+      "Evaluate embedding models on complex, long-horizon memory retrieval.",
+    overview:
+      "Long-horizon memory retrieval quality across episodic, dialogue, semantic, and procedural retrieval tasks, measuring how well embedding models retrieve evidence in long-term memory scenarios.",
+    stats: [
+      {
+        value: "22",
+        label: "Datasets",
+      },
+      {
+        value: "193",
+        label: "Retrieval Tasks",
+      },
+      {
+        value: "4",
+        label: "Memory Types",
+      },
+    ],
+    memory_types: [
+      {
+        icon: "fas fa-calendar-alt",
+        title: "Episodic Memory",
+        description:
+          "Specific events, Time-stamped;",
+      },
+      {
+        icon: "fas fa-comments",
+        title: "Dialogue Memory",
+        description:
+          "Interaction History, Order-sensitive;",
+      },
+      {
+        icon: "fas fa-book",
+        title: "Semantic Memory",
+        description:
+          "General Knowledge, Context-insensitive;",
+      },
+      {
+        icon: "fas fa-tools",
+        title: "Procedural Memory",
+        description:
+          "Action Konw-how, Execution-Oriented;",
+      },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        icon: "fab fa-github",
+        url: "https://github.com/KaLM-Embedding/LMEB",
+      },
+      {
+        label: "Dataset",
+        icon: "fas fa-database",
+        url: "https://huggingface.co/datasets/KaLM-Embedding/LMEB",
+      },
+      {
+        label: "arXiv",
+        icon: "fas fa-file-pdf",
+        url: "https://arxiv.org/abs/2603.12572v1",
+      },
+      {
+        label: "Hugging Face Paper",
+        icon: "fas fa-face-smile",
+        url: "https://huggingface.co/papers/2603.12572",
+      },
+    ],
+  },
   datasets: [
     {
       name: "KaLM-embedding-pretrain-data",

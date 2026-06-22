@@ -661,6 +661,188 @@ body {
 	color: var(--surface);
 }
 
+/* ===== LMEB Section ===== */
+.lmeb {
+	padding: 5rem 2rem 0;
+	background-color: var(--surface);
+}
+
+.lmeb-panel {
+	background-color: #fce8e6;
+	padding: 2.4rem 0 3.5rem;
+	border-radius: var(--radius);
+}
+
+.lmeb-card {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1.2rem;
+	align-items: center;
+	max-width: 1050px;
+	margin: 0 auto 1.6rem;
+	padding: 1.8rem;
+	background-color: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-soft);
+	transition: all 0.28s ease;
+}
+
+.lmeb-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow);
+}
+
+
+.lmeb-card p {
+	color: var(--text-muted);
+	line-height: 1.7;
+	font-size: 1.02rem;
+}
+
+.lmeb-stats {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	max-width: 1050px;
+	margin: 0 auto 1.6rem;
+}
+
+.lmeb-stat {
+	padding: 1.4rem;
+	background-color: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	text-align: center;
+	box-shadow: var(--shadow-soft);
+}
+
+.lmeb-stat:nth-child(3n + 1) {
+	border-color: rgba(26, 115, 232, 0.16);
+	background-color: var(--surface);
+}
+
+.lmeb-stat:nth-child(3n + 2) {
+	border-color: rgba(234, 67, 53, 0.16);
+	background-color: var(--surface);
+}
+
+.lmeb-stat:nth-child(3n) {
+	border-color: rgba(52, 168, 83, 0.16);
+	background-color: var(--surface);
+}
+
+.lmeb-stat-value {
+	display: block;
+	font-size: 2rem;
+	font-weight: 900;
+	line-height: 1;
+	color: var(--text-strong);
+	margin-bottom: 0.45rem;
+}
+
+.lmeb-stat-label {
+	color: var(--text-muted);
+	font-weight: 700;
+	font-size: 0.92rem;
+}
+
+.lmeb-memory-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.3rem;
+	max-width: 1050px;
+	margin: 0 auto 1.8rem;
+}
+
+.lmeb-memory-card {
+	padding: 1.6rem;
+	background-color: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-soft);
+	transition: all 0.28s ease;
+}
+
+.lmeb-memory-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow);
+}
+
+.lmeb-memory-icon {
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+	border-radius: 16px;
+	background-color: #fef7e0;
+	color: #d18f00;
+	border: 1px solid rgba(209, 143, 0, 0.18);
+	font-size: 1.35rem;
+}
+
+.lmeb-memory-card:nth-child(4n + 1) .lmeb-memory-icon {
+	background-color: #e8f0fe;
+	color: var(--blue);
+	border-color: rgba(26, 115, 232, 0.16);
+}
+
+.lmeb-memory-card:nth-child(4n + 2) .lmeb-memory-icon {
+	background-color: #fce8e6;
+	color: var(--red);
+	border-color: rgba(234, 67, 53, 0.16);
+}
+
+.lmeb-memory-card:nth-child(4n + 3) .lmeb-memory-icon {
+	background-color: #e6f4ea;
+	color: var(--green);
+	border-color: rgba(52, 168, 83, 0.16);
+}
+
+.lmeb-memory-card h3 {
+	font-size: 1.12rem;
+	font-weight: 800;
+	color: var(--text-strong);
+	margin-bottom: 0.55rem;
+}
+
+.lmeb-memory-card p {
+	color: var(--text-muted);
+	line-height: 1.65;
+}
+
+.lmeb-links {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	max-width: 1050px;
+	margin: 0 auto;
+}
+
+.lmeb-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.65rem 1.15rem;
+	background-color: var(--surface);
+	color: var(--red);
+	text-decoration: none;
+	border-radius: 10px;
+	font-weight: 800;
+	border: 1px solid rgba(234, 67, 53, 0.18);
+	transition: all 0.25s ease;
+}
+
+.lmeb-link:hover {
+	background-color: var(--red);
+	border-color: var(--red);
+	color: var(--surface);
+	transform: translateY(-2px);
+}
+
 /* ===== Datasets Section ===== */
 .datasets {
 	padding: 5rem 2rem;
@@ -833,12 +1015,19 @@ body {
 
 	.models-grid,
 	.papers-grid,
+	.lmeb-stats,
+	.lmeb-memory-grid,
 	.datasets-grid {
 		grid-template-columns: 1fr;
 	}
 
 	.features-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.lmeb-card {
+		grid-template-columns: 1fr;
+		text-align: left;
 	}
 
 	.footer-content {
@@ -848,6 +1037,20 @@ body {
 
 	.nav-container {
 		padding: 0.85rem 1.2rem;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		justify-content: center;
+	}
+
+	.nav-links {
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+	}
+
+	.nav-link {
+		padding: 0.5rem 0.85rem;
 	}
 
 	.hero-content {
@@ -877,6 +1080,8 @@ html {
 .feature-card,
 .model-card,
 .paper-card,
+.lmeb-card,
+.lmeb-memory-card,
 .dataset-card {
 	animation: fadeInUp 0.6s ease-out;
 }

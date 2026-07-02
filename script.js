@@ -49,6 +49,31 @@ function renderContent() {
     modelsGrid.appendChild(card);
   });
 
+  // 3.5. Rerankers Section
+  const rerankersGrid = document.getElementById("rerankers-grid");
+  if (rerankersGrid && KaLM_Content.rerankers) {
+    KaLM_Content.rerankers.forEach((model) => {
+      const card = document.createElement("div");
+      card.className = "model-card";
+      card.innerHTML = `
+            <div class="model-header">
+                <i class="fas fa-sort-amount-down model-icon"></i>
+                ${model.is_latest ? '<span class="model-badge">Latest</span>' : ""}
+            </div>
+            <h3 class="model-name">${model.name}</h3>
+            <p class="paper-date">Released: ${model.date}</p>
+            <p class="model-type">${model.type}</p>
+            <p class="model-description">${model.description}</p>
+            <div class="model-links">
+                <a href="${model.link}" target="_blank" class="model-link">
+                    <i class="fas fa-external-link-alt"></i> Hugging Face
+                </a>
+            </div>
+        `;
+      rerankersGrid.appendChild(card);
+    });
+  }
+
   // 4. Papers Section
   const papersGrid = document.getElementById("papers-grid");
   KaLM_Content.papers.forEach((paper) => {
@@ -222,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Observe all cards
   const cards = document.querySelectorAll(
-    ".feature-card, .model-card, .paper-card, .lmeb-card, .lmeb-memory-card, .dataset-card"
+    ".feature-card, .model-card, .paper-card, .dataset-card"
   );
   cards.forEach((card, index) => {
     card.style.opacity = "0";
@@ -230,6 +255,42 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.transition = `all 0.6s ease ${index * 0.1}s`;
     observer.observe(card);
   });
+
+  // Observe the LMEB panel as a whole for bounce-up animation
+  const lmebPanel = document.querySelector(".lmeb-panel");
+  if (lmebPanel) {
+    const innerSections = lmebPanel.querySelectorAll(
+      "#lmeb-overview, #lmeb-stats, #lmeb-memory-grid, #lmeb-links"
+    );
+    innerSections.forEach((section) => {
+      section.style.opacity = "0";
+      section.style.transform = "translateY(30px)";
+    });
+
+    const lmebPanelObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("animate-in");
+            }, 500);
+
+            innerSections.forEach((section, index) => {
+              setTimeout(() => {
+                section.style.transition = "all 0.6s ease";
+                section.style.opacity = "1";
+                section.style.transform = "translateY(0)";
+              }, 950 + index * 120);
+            });
+
+            lmebPanelObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
+    );
+    lmebPanelObserver.observe(lmebPanel);
+  }
 
   // Add hover effect to logo
   const logo = document.querySelector(".logo-circle");
@@ -292,5 +353,3 @@ window.addEventListener("load", () => {
     document.body.style.opacity = "1";
   }, 100);
 });
-
-

@@ -90,6 +90,32 @@ const KaLM_Content = {
       is_latest: false,
     },
   ],
+  rerankers: [
+    {
+      name: "KaLM-Reranker-V1-Large",
+      type: "Text Ranking • A4B Parameters",
+      date: "June 2026",
+      description: "Compressed Document Reranking",
+      link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Large",
+      is_latest: true,
+    },
+    {
+      name: "KaLM-Reranker-V1-Small",
+      type: "Text Ranking • A1B Parameters",
+      date: "June 2026",
+      description: "Compressed Document Reranking",
+      link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Small",
+      is_latest: true,
+    },
+    {
+      name: "KaLM-Reranker-V1-Nano",
+      type: "Text Ranking • A0.27B Parameters",
+      date: "June 2026",
+      description: "Compressed Document Reranking",
+      link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano",
+      is_latest: true,
+    },
+  ],
   papers: [
     {
       title:
@@ -207,6 +233,12 @@ const KaLM_Content = {
       description:
         "Versatile, task-specific fine-tuning data for multi-domain and multi-task learning.",
       link: "https://huggingface.co/datasets/KaLM-Embedding/KaLM-embedding-finetuning-data",
+    },
+    {
+      name: "KaLM-embedding-finetuning-data-spanish",
+      description:
+        "Versatile, task-specific Spanish fine-tuning data for multi-domain and multi-task learning.",
+      link: "https://huggingface.co/datasets/KaLM-Embedding/KaLM-embedding-finetuning-data-spanish",
     },
   ],
 };

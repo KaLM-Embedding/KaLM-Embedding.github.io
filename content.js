@@ -91,13 +91,37 @@ const KaLM_Content = {
     },
   ],
   rerankers: [
+        {
+      name: "KaLM-Reranker-V1-Large-Q8_0-GGUF",
+      type: "Text Ranking • A4B Parameters • Q8_0 GGUF",
+      date: "July 2026",
+      description: "Compressed Document Reranking",
+      link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Large-Q8_0-GGUF",
+      is_latest: true,
+    },
+    {
+      name: "KaLM-Reranker-V1-Small-Q8_0-GGUF",
+      type: "Text Ranking • A1B Parameters • Q8_0 GGUF",
+      date: "July 2026",
+      description: "Compressed Document Reranking",
+      link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Small-Q8_0-GGUF",
+      is_latest: true,
+    },
+    {
+      name: "KaLM-Reranker-V1-Nano-Q8_0-GGUF",
+      type: "Text Ranking • A0.27B Parameters • Q8_0 GGUF",
+      date: "July 2026",
+      description: "Compressed Document Reranking",
+      link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano-Q8_0-GGUF",
+      is_latest: true,
+    },
     {
       name: "KaLM-Reranker-V1-Large",
       type: "Text Ranking • A4B Parameters",
       date: "June 2026",
       description: "Compressed Document Reranking",
       link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Large",
-      is_latest: true,
+      is_latest: false,
     },
     {
       name: "KaLM-Reranker-V1-Small",
@@ -105,7 +129,7 @@ const KaLM_Content = {
       date: "June 2026",
       description: "Compressed Document Reranking",
       link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Small",
-      is_latest: true,
+      is_latest: false,
     },
     {
       name: "KaLM-Reranker-V1-Nano",
@@ -113,7 +137,7 @@ const KaLM_Content = {
       date: "June 2026",
       description: "Compressed Document Reranking",
       link: "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano",
-      is_latest: true,
+      is_latest: false,
     },
   ],
   papers: [

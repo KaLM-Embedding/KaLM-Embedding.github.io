@@ -224,6 +224,11 @@ const KaLM_Content = {
     ],
     links: [
       {
+        label: "Leaderboard",
+        icon: "fa-solid fa-ranking-star",
+        url: "https://mteb-leaderboard.hf.space/benchmark/LMEB",
+      },
+      {
         label: "GitHub",
         icon: "fab fa-github",
         url: "https://github.com/KaLM-Embedding/LMEB",

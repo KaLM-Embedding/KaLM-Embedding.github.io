@@ -143,6 +143,17 @@ const KaLM_Content = {
   papers: [
     {
       title:
+        "KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking",
+      arxiv_id: "2606.22807",
+      date: "June 2026",
+      description:
+        "This paper proposes KaLM-Reranker-V1, a fast but not late-interaction (FBNL) reranker that decouples query and passage computation while retaining expressive relevance modeling.",
+      arxiv_link: "https://arxiv.org/abs/2606.22807",
+      hf_link: "https://huggingface.co/papers/2606.22807",
+      is_latest: true,
+    },
+    {
+      title:
         "KaLM-Embedding-V2: Superior Training Techniques and Data Inspire A Versatile Embedding Model",
       arxiv_id: "2506.20923",
       date: "June 2025",
@@ -150,7 +161,7 @@ const KaLM_Content = {
         "This paper proposes KaLM-Embedding-V2, a versatile and compact embedding model that achieves impressive performance in general-purpose text embedding tasks through systematic incentivization of advanced embedding techniques.",
       arxiv_link: "https://arxiv.org/abs/2506.20923",
       hf_link: "https://huggingface.co/papers/2506.20923",
-      is_latest: true,
+      is_latest: false,
     },
     {
       title:
